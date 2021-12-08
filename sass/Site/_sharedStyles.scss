@@ -1,0 +1,96 @@
+@import "./variables";
+
+.sharedStylesSections {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  max-width: $--container-width;
+
+  height: 100%;
+
+  &--fontColorFree {
+    color: $--main-green;
+  }
+
+  &__name {
+    padding: 1rem 0 3rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-family: $--main-Font;
+  }
+
+  &__container {
+    @include FlexAlignCenter;
+  }
+
+  &__img {
+    height: 40rem;
+    width: 40rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 2rem;
+    font-family: $--main-Font;
+    padding-bottom: 2rem;
+
+    h1 {
+      @include FlexAlignCenter;
+      justify-content: center;
+    }
+  }
+
+  &__p {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    font-family: $--main-Font;
+  }
+}
+
+.SharedButton {
+  @include FlexAlignCenter;
+  justify-content: center;
+
+  text-transform: uppercase;
+  color: $--background-free;
+  font-family: $--main-Font;
+  font-size: 0.9rem;
+  height: 3rem;
+  width: 17rem;
+  border-radius: 50px;
+  background: $--main-green;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &--free {
+    a {
+      color: $--background-free;
+    }
+  }
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    background: #43e57d;
+  }
+
+  &--premium {
+    background-color: $--black;
+    color: $--white;
+
+    &:hover {
+      transform: scale(1.03);
+      cursor: pointer;
+      background-color: $--black;
+    }
+  }
+}

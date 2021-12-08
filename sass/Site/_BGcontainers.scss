@@ -1,0 +1,17 @@
+@import "./variables";
+
+.container {
+  background-color: $--black;
+
+  &--premium {
+    background-color: $--background-premium;
+  }
+
+  &--free {
+    background-color: $--background-free;
+  }
+
+  &--footer {
+    background-color: $--black;
+  }
+}

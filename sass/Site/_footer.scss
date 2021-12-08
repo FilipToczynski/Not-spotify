@@ -1,0 +1,143 @@
+@import "./variables";
+
+.footer {
+  background: $--black;
+  display: flex;
+  flex-direction: column;
+  font-family: $--main-Font;
+  max-width: $--container-width;
+  padding: 80px 0;
+  height: fit-content;
+  margin: 0 auto;
+
+  ul {
+    list-style-type: none;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: #5e5e5e;
+    }
+
+    li {
+      padding: 0.6rem;
+      font-size: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $--white;
+
+      &:hover {
+        color: $--main-green;
+      }
+    }
+  }
+
+  &__logo {
+    @include FlexAlignCenter;
+    justify-content: center;
+
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: #222326;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+      filter: $--iconFilter-white;
+      display: block;
+      justify-content: center;
+    }
+
+    &:hover img {
+      filter: $--iconFilter-green;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 22rem;
+    padding: 0 15px;
+  }
+
+  &__topList {
+    display: flex;
+
+    ul {
+      padding: 0 2rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin-left: 12rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px;
+    flex-wrap: wrap;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration-line: none;
+      font-family: $--main-Font;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-grow: 3;
+    }
+
+    li {
+      color: $--footer-grey;
+
+      &:last-child {
+        margin-left: 12rem;
+        padding-right: 0;
+        font-size: 0.7rem;
+      }
+      a {
+        font-size: 0.7rem;
+        color: $--footer-grey;
+
+        &:hover {
+          color: $--main-green;
+        }
+      }
+    }
+  }
+
+  &__country {
+    display: flex;
+    justify-content: flex-end;
+    color: $--white;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 0.8rem;
+    color: $--footer-grey;
+
+    a:hover {
+      color: $--main-green;
+      cursor: pointer;
+    }
+  }
+
+  &__spotify {
+    height: 7rem;
+    width: 9rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
